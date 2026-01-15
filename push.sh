@@ -14,15 +14,16 @@ fi
 
 echo "🚀 Current branch: $BRANCH"
 
-# 推送到 origin
+# 推送到 github
+echo "----------------------------------------"
+echo "📡 Pushing to gitee..."
+git push github "$BRANCH"
+
+# 推送到 gitee
 echo "----------------------------------------"
 echo "📡 Pushing to origin..."
 git push origin "$BRANCH"
 
-# 推送到 gitee
-echo "----------------------------------------"
-echo "📡 Pushing to gitee..."
-git push gitee "$BRANCH"
 
 echo "----------------------------------------"
 echo "✅ All pushed successfully!"
