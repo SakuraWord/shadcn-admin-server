@@ -6,6 +6,7 @@ export const databaseProviders = [
     provide: 'DATA_SOURCE',
     inject: [ConfigService],
     useFactory: async (configService: ConfigService) => {
+      console.log()
       const dataSource = new DataSource({
         type: 'mysql',
         host: configService.get<string>('DB_HOST', 'localhost'),

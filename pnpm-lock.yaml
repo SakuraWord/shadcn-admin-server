@@ -32,6 +32,15 @@ importers:
       class-validator:
         specifier: ^0.14.3
         version: 0.14.3
+      config:
+        specifier: ^4.2.0
+        version: 4.2.0
+      dotenv:
+        specifier: ^17.2.3
+        version: 17.2.3
+      js-yaml:
+        specifier: ^4.1.1
+        version: 4.1.1
       mysql2:
         specifier: ^3.16.0
         version: 3.16.0
@@ -1445,6 +1454,10 @@ packages:
     resolution: {integrity: sha512-MWufYdFw53ccGjCA+Ol7XJYpAlW6/prSMzuPOTRnJGcGzuhLn4Scrz7qf6o8bROZ514ltazcIFJZevcfbo0x7A==}
     engines: {'0': node >= 6.0}
 
+  config@4.2.0:
+    resolution: {integrity: sha512-mk+ugmNm+BWc2YRlwmuJkORUvUyEP6w9cDUKU2sljFLYI4StXjqGDqQTA2wITi8sYaRdC/PGOuktqy7+Y4PApw==}
+    engines: {node: '>= 20.0.0'}
+
   consola@3.4.2:
     resolution: {integrity: sha512-5IKcdX0nnYavi6G7TtOhwkYzyjfJlatbjMjuLSfE2kYT5pMDOilZ4OvMhi637CcDICTmz3wARPoyhqyX1Y+XvA==}
     engines: {node: ^14.18.0 || >=16.10.0}
@@ -1561,6 +1574,10 @@ packages:
 
   dotenv@16.6.1:
     resolution: {integrity: sha512-uBq4egWHTcTt33a72vpSG0z3HnPuIl6NqYcTrKEg2azoEyl2hpW0zqlxysq2pK9HlDIHyHyakeYaYnSAwd8bow==}
+    engines: {node: '>=12'}
+
+  dotenv@17.2.3:
+    resolution: {integrity: sha512-JVUnt+DUIzu87TABbhPmNfVdBDt18BLOWjMUFJMSi/Qqg7NTYtabbvSNJGOJ7afbRuv9D/lngizHtP7QyLQ+9w==}
     engines: {node: '>=12'}
 
   dunder-proto@1.0.1:
@@ -4759,6 +4776,10 @@ snapshots:
       readable-stream: 3.6.2
       typedarray: 0.0.6
 
+  config@4.2.0:
+    dependencies:
+      json5: 2.2.3
+
   consola@3.4.2: {}
 
   content-disposition@1.0.1: {}
@@ -4841,6 +4862,8 @@ snapshots:
   dotenv@16.4.7: {}
 
   dotenv@16.6.1: {}
+
+  dotenv@17.2.3: {}
 
   dunder-proto@1.0.1:
     dependencies:

@@ -1,5 +1,6 @@
-import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, Generated } from 'typeorm';
-
+import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, Generated, OneToOne, JoinColumn, OneToMany } from 'typeorm';
+import { Role } from '../../roles/roles.entity'
+import { Logs } from '../../log/entities/log.entity';
 @Entity('user')
 export class User {
   @PrimaryGeneratedColumn('uuid')
@@ -27,16 +28,17 @@ export class User {
   @Column()
   avatar: string; // 头像
 
-  @Column({
-    type: "enum",
-    enum: [1, 2, 3, 0], // 1: 超管，2: 普通管理员，3: 普通用户，0: 禁用用户
-    default: 1
-  })
-  role: number; // 角色 0: 普通用户 1: 管理员
+  @OneToOne(() => Role)
+  @JoinColumn({ name: 'role_id' })
+  role: Role; // 角色 0: 普通用户 1: 管理员
 
   @Column({ type: "int" })
   age: number
 
   @CreateDateColumn({ type: "timestamp" })
   create_time: Date
+
+  // 告诉和那个表建立关系
+  @OneToMany(() => Logs, (log) => log.user)
+  logs: Logs[];
 }

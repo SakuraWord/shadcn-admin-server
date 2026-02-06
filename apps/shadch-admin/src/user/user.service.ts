@@ -6,8 +6,21 @@ import { UpdateUserDto } from './dto/update-user.dto';
 export class UserService {
   create(createUserDto: CreateUserDto) {
     console.log(createUserDto, '=============================')
-    return 'This action adds a new user';
+    // try {
+    //   const user = await this.userRepository.save(createUserDto)
+    //   return {
+    //     code: 200,
+    //     message: '注册成功',
+    //     data: user
+    //   }
+    // } catch (error) {
+    //   return {
+    //     code: 500,
+    //     message: error.message
+    //   }
+    // }
   }
+
 
   findAll() {
     return `This action returns all user`;
