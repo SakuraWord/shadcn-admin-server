@@ -5,6 +5,7 @@ import { UserModule } from './user/user.module';
 import { ConfigModule } from '@nestjs/config';
 import { DatabaseModule } from './database/database.module';
 import { LogMiddleware } from './middleware/log.middleware';
+import { LogModule } from './log/log.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { LogMiddleware } from './middleware/log.middleware';
     }),
     DatabaseModule,
     UserModule,
+    LogModule,
   ],
   controllers: [AppController],
   providers: [AppService],
